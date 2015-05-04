@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="Keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="Description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="$Id: index.html,v 1.6 2004/10/29 19:52:37 mikhail Exp $ - XOOPS BRASIL - Licence: GNU" />
+<title><{$xoops_sitename}>-<{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<script language="JavaScript" type="text/javascript">
+<!--
+// Courtesy of SimplytheBest.net (http://simplythebest.net/info/dhtml_scripts.html)
+function makeArray(n) {
+this.length = n
+return this
+}
+monthNames = new makeArray(12)
+monthNames[1] = "January"
+monthNames[2] = "February"
+monthNames[3] = "March"
+monthNames[4] = "April"
+monthNames[5] = "May"
+monthNames[6] = "June"
+monthNames[7] = "July"
+monthNames[8] = "August"
+monthNames[9] = "September"
+monthNames[10] = "October"
+monthNames[11] = "November"
+monthNames[12] = "December"
+function dateString(oneDate) {
+var theMonth = monthNames[oneDate.getMonth() + 1]
+var theYear = oneDate.getFullYear()
+return theMonth + " " + oneDate.getDate() + ", " + theYear
+}
+function MM_goToURL() { //v3.0
+var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+//-->
+</script>
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body> 
+<a name="top" id="top"></a> 
+<table class="dravid" cellspacing="0"> 
+<tr> 
+<td class="mainpage"><!-- start of header -->
+<table class="dravid" cellspacing="0"> 
+<tr>
+<td id="headerbanner" style="width:396px;" > <img src="<{$xoops_imageurl}>header.png" alt="Logo" width="396" height="60" /></td> 
+<td class="headerright"> <!-- start of top nav buttons table --> 
+<table border="0" cellspacing="0" cellpadding="2"> 
+<tr> 
+<td>&nbsp;</td> 
+<!-- start Buttons -->
+<td width="40"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>but1.png" alt="Home" width="40" height="42" border="0" /></a></td> 
+<td width="40"><a href="<{$xoops_url}>/modules/wfdownloads/"><img src="<{$xoops_imageurl}>but2.png" alt="Downloads" width="40" height="42" border="0" /></a></td> 
+<td width="40"><a href="<{$xoops_url}>/modules/liaise/"><img src="<{$xoops_imageurl}>but3.png" alt="Email" width="40" height="42" border="0" /></a></td> 
+<td width="40"><a href="<{$xoops_url}>/search.php"><img src="<{$xoops_imageurl}>but4.png" alt="Advanced Search" width="40" height="42" border="0" /></a></td> 
+<!-- end Buttons -->
+<td width="10">&nbsp;</td> 
+</tr>
+</table> 
+<!-- finish of top nav buttons table --> </td> 
+</tr>
+ </table> 
+<!-- end of header --> 
+<table class="dravid" cellspacing="0"> 
+<tr> 
+<td><table class="dravid" cellspacing="0"> 
+<tr> 
+<td rowspan="2" id="leftcolumn"><table class="dravid" cellspacing="0" > 
+<tr> 
+<td height="54" class="side"><img src="<{$xoops_imageurl}>side.png" alt="Image" /></td> 
+</tr> 
+<tr> 
+<td style="background-image: url(<{$xoops_imageurl}>bar1.png);" class="spacerbar"></td> 
+</tr> 
+<tr> 
+<td align="center"> <div style="padding-bottom:2px;" > <span class="small"> 
+<script 
+language="JavaScript" type="text/javascript">document.write(dateString(new Date()))</script> 
+</span></div></td> 
+</tr> 
+<tr> 
+<td><!-- Start left blocks loop --> 
+<{foreach item=block from=$xoops_lblocks}> <{include file="sev_dravid/theme_blockleft.html"}> <{/foreach}> 
+<!-- Fim do "loop" dos blocos da esquerda --></td> 
+</tr> 
+<tr> 
+<td><!-- Início dos blocos da direita --> 
+<{foreach item=block from=$xoops_rblocks}> <{include file="sev_dravid/theme_blockright.html"}> <{/foreach}> 
+<!-- End right blocks loop --></td> 
+</tr> 
+</table></td> 
+<td bgcolor="#FFFFFF" id="centercolumn"><table border="0" cellspacing="0" cellpadding="5"> 
+<tr> 
+<td id="hbar"> <{if $xoops_isuser}><span class="small">You
+are logged in as <a href="<{$xoops_url}>/user.php">&quot;<{$xoops_uname}>&quot;</a></span>&nbsp;&nbsp;&nbsp;<{else}> 
+<form style="margin-bottom:0px;" action="<{$xoops_url}>/user.php" method="post">
+User:
+<input type="text" name="uname" size="12" value="<{$block.unamevalue}>" /> 
+&nbsp; Pass:
+<input type="password" name="pass" size="12" /> 
+<input type="hidden" name="op" value="login" /> 
+<input type="submit" value="Login" name="login" /> 
+<input name="register" type="button" id="register" onclick="MM_goToURL('parent','<{$xoops_url}>/register.php');return document.MM_returnValue" value="Register" /> 
+<input name="Submit" type="submit" onclick="MM_goToURL('parent','<{$xoops_url}>/user.php');return document.MM_returnValue" value="&nbsp;?&nbsp;" /> 
+</form> 
+<{/if}></td> 
+<td align="right" id="hbar"><form style="margin-bottom:0px;" action="<{$xoops_url}>/search.php" method="post"> 
+<input type="text" name="query" size="10" /> 
+<input type="hidden" name="action" value="results" /> 
+<input type="image" value="Search" name="search" src="<{$xoops_imageurl}>srchbut.png" alt="Search Site" align="middle" /> 
+</form></td> 
+</tr> 
+</table> 
+<br /> 
+<br /> 
+<{if $xoops_showcblock == 1}> 
+<table cellspacing="0"> 
+<tr> 
+<td id="centerCcolumn" colspan="2"> <!-- Start center-center blocks loop --> 
+<{foreach item=block from=$xoops_ccblocks}> <{include file="sev_dravid/theme_blockcenter_c.html"}> <{/foreach}><br /> 
+<!-- End center-center blocks loop --> </td> 
+</tr> 
+<tr> 
+<td id="centerLcolumn"> <!-- Start center-left blocks loop --> 
+<{foreach item=block from=$xoops_clblocks}> <{include file="sev_dravid/theme_blockcenter_l.html"}><br /> 
+<{/foreach}> 
+<!-- End center-left blocks loop --> </td> 
+<td id="centerRcolumn"> <!-- Start center-right blocks loop --> 
+<{foreach item=block from=$xoops_crblocks}> <{include file="sev_dravid/theme_blockcenter_r.html"}><br /> 
+<{/foreach}> 
+<!-- End center-right blocks loop --> </td> 
+</tr> 
+</table> 
+<{/if}> 
+<!-- End display center blocks --> 
+<div id="content"> <{$xoops_contents}> <br /> 
+<br /> 
+</div></td> 
+</tr> 
+<tr> 
+<td align="center" bgcolor="#FFFFFF"><br /> 
+<a href="#top" title="Back to top of page"><span class="small">[TOP]</span></a><br /> <br /></td> 
+</tr> 
+<tr> 
+<td id="footerbar">&nbsp;</td> 
+<td id="footerbar" bgcolor="#FFFFFF"><span class="footertext"><{$xoops_footer}></span></td> 
+</tr> 
+</table></td> 
+</tr> 
+</table></td> 
+<td style="background-image: url(<{$xoops_imageurl}>shadow.png); width:14px;">&nbsp;</td> 
+<td bgcolor="#CCCCCC">&nbsp;</td> 
+</tr> 
+</table> 
+</body>
+</HTML>
